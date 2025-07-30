@@ -1,0 +1,26 @@
+.result-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.result-card .logo {
+    width: 48px;
+    height: 48px;
+    background-color: #eee;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.result-card .info {
+    flex: 1;
+}
+
+.result-card .date {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
