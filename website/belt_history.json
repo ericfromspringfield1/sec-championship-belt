@@ -1186,21 +1186,22 @@
     "Date":"2024-10-05T00:00:00.000",
     "Winner":"Vanderbilt",
     "Loser":"Alabama",
-    "Score":"40–35",
+    "Score":"40-35",
     "Notes":"Belt passed to Vanderbilt"
   },
   {
     "Date":"2024-10-26T00:00:00.000",
     "Winner":"Texas",
     "Loser":"Vanderbilt",
-    "Score":"27–24",
+    "Score":"27-24",
     "Notes":"Belt passed to Texas"
   },
   {
     "Date":"2024-12-07T00:00:00.000",
     "Winner":"Georgia",
     "Loser":"Texas",
-    "Score":"22–19 (OT)",
+    "Score":"22-19 (OT)",
     "Notes":"Belt passed to Georgia"
   }
+]
 
