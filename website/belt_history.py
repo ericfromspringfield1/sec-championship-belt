@@ -20,6 +20,29 @@ def save_history(history: List[Dict[str, str]]) -> None:
 
 
 def get_current_champion() -> Optional[str]:
+    """Return the team currently holding the belt."""
+    history = load_history()
+    return history[-1]['Winner'] if history else None
+
+
+def add_new_champion(
+    champion: str,
+    game_date: str,
+    loser: str,
+    score: str = "",
+    notes: Optional[str] = None,
+) -> None:
+    """Append a new belt result to the history file."""
+    history = load_history()
+    history.append(
+        {
+            "Date": game_date,
+            "Winner": champion,
+            "Loser": loser,
+            "Score": score,
+            "Notes": notes,
+        }
+    )
     history = load_history()
     return history[-1]['champion'] if history else None
 
@@ -27,6 +50,7 @@ def get_current_champion() -> Optional[str]:
 def add_new_champion(champion: str, game_date: str) -> None:
     history = load_history()
     history.append({'date': game_date, 'champion': champion})
+    main
     save_history(history)
 
 
@@ -79,7 +103,18 @@ def update_belt() -> Optional[str]:
         return champion
 
     if champion_score < opponent_score:
+        codex/create-flask-or-django-application-with-belt-history
+        score_str = f"{opponent_score}-{champion_score}"
+        add_new_champion(
+            opponent_team,
+            today.isoformat(),
+            loser=champion,
+            score=score_str,
+            notes=None,
+        )
+
         add_new_champion(opponent_team, today.isoformat())
+        main
         return opponent_team
 
     return champion
