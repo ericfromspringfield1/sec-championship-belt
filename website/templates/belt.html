@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SEC Championship Belt</title>
+</head>
+<body>
+    <h1>Current Champion: {{ current }}</h1>
+    <h2>History</h2>
+    <ul>
+    {% for item in history %}
+        <li>{{ item.date }} - {{ item.champion }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
