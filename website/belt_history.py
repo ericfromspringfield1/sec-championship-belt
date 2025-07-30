@@ -43,6 +43,14 @@ def add_new_champion(
             "Notes": notes,
         }
     )
+    history = load_history()
+    return history[-1]['champion'] if history else None
+
+
+def add_new_champion(champion: str, game_date: str) -> None:
+    history = load_history()
+    history.append({'date': game_date, 'champion': champion})
+    main
     save_history(history)
 
 
@@ -95,6 +103,7 @@ def update_belt() -> Optional[str]:
         return champion
 
     if champion_score < opponent_score:
+        codex/create-flask-or-django-application-with-belt-history
         score_str = f"{opponent_score}-{champion_score}"
         add_new_champion(
             opponent_team,
@@ -103,6 +112,9 @@ def update_belt() -> Optional[str]:
             score=score_str,
             notes=None,
         )
+
+        add_new_champion(opponent_team, today.isoformat())
+        main
         return opponent_team
 
     return champion

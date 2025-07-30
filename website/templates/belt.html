@@ -12,6 +12,7 @@
             {{ item.Date }} - {{ item.Winner }} defeated {{ item.Loser }}
             {% if item.Score %}({{ item.Score }}){% endif %}
         </li>
+        <li>{{ item.date }} - {{ item.champion }}</li>
     {% endfor %}
     </ul>
 </body>
