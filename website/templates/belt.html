@@ -2,18 +2,21 @@
 <html>
 <head>
     <title>SEC Championship Belt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Current Champion: {{ current }}</h1>
     <h2>History</h2>
-    <ul>
+    <div class="results">
     {% for item in history %}
-        <li>
-            {{ item.Date }} - {{ item.Winner }} defeated {{ item.Loser }}
-            {% if item.Score %}({{ item.Score }}){% endif %}
-        </li>
-        <li>{{ item.date }} - {{ item.champion }}</li>
+        <div class="result-card">
+            <div class="logo"></div>
+            <div class="info">
+                <div class="date">{{ item.Date }}</div>
+                <div class="text">{{ item.Winner }} defeated {{ item.Loser }}{% if item.Score %} ({{ item.Score }}){% endif %}</div>
+            </div>
+        </div>
     {% endfor %}
-    </ul>
+    </div>
 </body>
 </html>
